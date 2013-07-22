@@ -85,7 +85,7 @@ helper parse_markdown => sub {
 get '/' => sub {
   my ($self) = @_;
 
-  my $pm = $self->parse_markdown(b(file('slide.md')->slurp)->decode);
+  my $pm = $self->parse_markdown(b(file($ARGV[0] || 'slide.md')->slurp)->decode);
   $self->render(
     template => 'index',
     presentation  => $pm->{content},
