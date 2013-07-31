@@ -1,7 +1,0 @@
-requires 'perl', '5.008001';
-requires 'Dist::Maker', '0.10';
-
-on 'test' => sub {
-    requires 'Test::More', '0.98';
-};
-
