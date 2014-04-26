@@ -1,1 +1,4 @@
 *.md
+cpanfile.snapshot
+local
+.perl-version

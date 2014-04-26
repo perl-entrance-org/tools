@@ -11,6 +11,9 @@ app->secret(b(__FILE__)->sha1_sum);
 
 helper parse_markdown => sub {
   my ($self, $md) = @_;
+
+  $md =~ s!public/image/!image/!g; 
+
   my %opts = (
     width      => 1024,
     height     => 768,
